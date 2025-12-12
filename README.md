@@ -1,39 +1,77 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# liquid_glass_container
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+A customizable radar (spider) chart widget for Flutter.  
+This package helps you visualize multi-dimensional data in a clean, interactive radar chart.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+---
+<img src="https://raw.githubusercontent.com/VishnuB01/radar_chart_plus/main/example/lib/assets/chart_image.jpg" width="400" alt="Radar Chart Example">
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- 💧 Apple-style liquid glass effect
+
+- 🌫️ Realistic refraction, blur, and distortion
+
+- 📱 Fully responsive and GPU-accelerated using shaders
+
+- ⚡ Lightweight, smooth performance
+
+---
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+### Add the dependency:
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+```yaml
+dependencies:
+  liquid_glass_container: <latest_version>
+```
+### Import it:
 
 ```dart
-const like = 'sample';
+import 'package:liquid_glass_container/liquid_glass_container.dart';
 ```
+
+### Usage
+```dart
+LiquidGlassContainer(
+  width: 250,
+  height: 250,
+  borderRadius: BorderRadius.circular(30),
+  backgroundColor: Colors.white,
+  child: Center(
+    child: Text(
+      "Liquid Glass",
+      style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+    ),
+  ),
+);
+```
+---
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+**liquid_glass_container** aims to replicate the premium liquid glass effect widely seen in modern Apple UI.
+This widget is built with Flutter’s shader support and offers high customizability while staying lightweight.
+
+**Use it for:**
+
+* Cards
+* Dialogs
+* Profile sections
+* Modern dashboard components
+* Decorative UI blocks
+
+If you need enhancements — feel free to open an issue or request on GitHub!
+
+## Contribution
+
+Contributions are highly appreciated! Want to add improvements or fix something?
+
+**Follow these steps:**
+
+1. Fork the repository
+2. Create a branch for your feature or bug fix
+3. Implement your changes with clean commit messages
+4. Submit a Pull Request describing what you changed and why
+5. Your PR will be reviewed and merged after approval

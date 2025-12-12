@@ -1,12 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:liquid_glass_container/liquid_glass_container.dart';
 
 void main() {
-  test('adds one to input values', () {
-    // final calculator = Calculator();
-    // expect(calculator.addOne(2), 3);
-    // expect(calculator.addOne(-7), -6);
-    // expect(calculator.addOne(0), 1);
+  test('Liquid Glass Container Created', () {
+    LiquidGlassContainer(
+      width: 150,
+      height: 100,
+      child: Center(child: Text('Liquid Glass Container')),
+    );
   });
 }

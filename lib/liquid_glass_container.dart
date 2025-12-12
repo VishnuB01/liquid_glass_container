@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+
 /// Simple liquid glass container that applies the effect directly
 class LiquidGlassContainer extends StatefulWidget {
   final Widget? child;

@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
               child: Image.asset(
                 // 'https://images.unsplash.com/photo-1644770510895-b61702eaafc3?q=80&w=3029&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 // 'https://images.unsplash.com/photo-1507608443039-bfde4fbcd142?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                // 'https://images.unsplash.com/photo-1600259487171-f3ec1ee9116a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+                // 'https://images.unsplash.com/photo-1582784085524-4eec6b9b364d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwM3x8fGVufDB8fHx8fA%3D%3D',
                 'assets/bgimage/bg_image4.png',
                 fit: BoxFit.fill,
                 height: double.infinity,
@@ -91,7 +91,7 @@ class MyApp extends StatelessWidget {
                           children: [
                             Icon(
                               Icons.signal_cellular_alt_rounded,
-                              color: Colors.white,
+                              color: Colors.white70,
                               size: Theme.of(
                                 context,
                               ).textTheme.headlineLarge?.fontSize,
@@ -105,15 +105,15 @@ class MyApp extends StatelessWidget {
                                       .textTheme
                                       .headlineSmall
                                       ?.copyWith(
-                                        color: Colors.white,
+                                        color: Colors.white70,
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),
                                 Text(
-                                  'On',
+                                  'Off',
                                   style: Theme.of(context).textTheme.titleLarge
                                       ?.copyWith(
-                                        color: Colors.white,
+                                        color: Colors.grey,
                                         fontWeight: FontWeight.bold,
                                       ),
                                 ),
@@ -121,7 +121,7 @@ class MyApp extends StatelessWidget {
                             ),
                           ],
                         ),
-                        blurRadiusPx: 0,
+                        blurRadiusPx: 5,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
