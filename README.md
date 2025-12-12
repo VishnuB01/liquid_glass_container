@@ -30,7 +30,7 @@ dependencies:
 ### Import it:
 
 ```dart
-import 'package:liquid_glass_container/liquid_glass_container.dart';
+import 'package:liquid_glass_container/liquid_glass_container_plus.dart';
 ```
 
 ### Usage
