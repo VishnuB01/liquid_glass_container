@@ -30,28 +30,34 @@ class LiquidGlassContainer extends StatefulWidget {
   ///
   /// If null, the widget will size itself according to its parent constraints.
   final Widget? child;
+
   /// The width of the container.
   ///
   /// If null, the widget will size itself according to its parent constraints.
   final double? width;
+
   /// The height of the container.
   ///
   /// If null, the widget will size itself according to its parent constraints.
   final double? height;
+
   /// The border radius applied to the container and the shader clipping.
   ///
   /// Defaults to `0.0`.
   final double borderRadius;
+
   /// The base background color that appears behind the shader effect.
   ///
   /// This can be used to tint the liquid-glass surface.
   /// Defaults to `Colors.transparent`.
   final Color color;
   final BoxShadow? shadow;
+
   /// Settings that control the behavior of the liquid glass shader.
   ///
   /// Includes blur intensity, refraction strength, distortion falloff, etc.
   final LiquidGlassSettings settings;
+
   /// Whether the shader effect is enabled.
   ///
   /// When `false`, the widget falls back to a regular container.
