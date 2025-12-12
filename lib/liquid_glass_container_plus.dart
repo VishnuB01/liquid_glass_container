@@ -1,17 +1,60 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-/// Simple liquid glass container that applies the effect directly
+/// A customizable container widget that applies a liquid-glass (frosted glass)
+/// shader effect behind its child.
+///
+/// This widget behaves like a regular [Container] but renders a real-time
+/// shader-based blur and distortion effect when `enabled` is `true`.
+///
+/// If the shader asset fails to load or the effect is disabled, the widget
+/// gracefully falls back to a normal container.
+///
+/// Example:
+/// ```dart
+/// LiquidGlassContainer(
+///   width: 200,
+///   height: 120,
+///   borderRadius: 16,
+///   color: Colors.white.withOpacity(0.2),
+///   child: Text('Hello'),
+/// );
+/// ```
+
 class LiquidGlassContainer extends StatefulWidget {
+  /// The widget placed inside the liquid glass container.
+  ///
+  /// This behaves the same as the `child` property of a regular [Container].
+  /// The width of the container.
+  ///
+  /// If null, the widget will size itself according to its parent constraints.
   final Widget? child;
+  /// The width of the container.
+  ///
+  /// If null, the widget will size itself according to its parent constraints.
   final double? width;
+  /// The height of the container.
+  ///
+  /// If null, the widget will size itself according to its parent constraints.
   final double? height;
+  /// The border radius applied to the container and the shader clipping.
+  ///
+  /// Defaults to `0.0`.
   final double borderRadius;
+  /// The base background color that appears behind the shader effect.
+  ///
+  /// This can be used to tint the liquid-glass surface.
+  /// Defaults to `Colors.transparent`.
   final Color color;
   final BoxShadow? shadow;
+  /// Settings that control the behavior of the liquid glass shader.
+  ///
+  /// Includes blur intensity, refraction strength, distortion falloff, etc.
   final LiquidGlassSettings settings;
+  /// Whether the shader effect is enabled.
+  ///
+  /// When `false`, the widget falls back to a regular container.
   final bool enabled;
 
   const LiquidGlassContainer({
@@ -161,7 +204,6 @@ class _LiquidGlassRenderWidget extends SingleChildRenderObjectWidget {
   }
 }
 
-/// Render object that applies the liquid glass shader effect
 class _RenderLiquidGlass extends RenderProxyBox {
   final FragmentShader _shader;
   LiquidGlassSettings _settings;

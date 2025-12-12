@@ -4,8 +4,8 @@ A beautiful Apple-style liquid glass container for Flutter, featuring refraction
 and distortion effects. Lightweight, customizable, and perfect for modern UI design.
 
 ---
-<img src="https://raw.githubusercontent.com/VishnuB01/liquid_glass_container/main/example/assets/screen_shots/screen_shot.jpg?raw=true" width="400" />
 
+<img src="https://raw.githubusercontent.com/VishnuB01/liquid_glass_container/main/example/assets/screen_shots/screen_shot.jpg?raw=true" width="400" />
 
 ## Features
 
@@ -37,20 +37,21 @@ import 'package:liquid_glass_container/liquid_glass_container_plus.dart';
 ### Usage
 
 ```dart
-LiquidGlassContainer
-(
-width: 250,
-height: 250,
-borderRadius: BorderRadius.circular(30),
-backgroundColor: Colors.white,
-child: Center(
-child: Text(
-"Liquid Glass",
-style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-),
+LiquidGlassContainer(
+  width: 250,
+  height: 250,
+  borderRadius: BorderRadius.circular(30),
+  backgroundColor: Colors.white,
+  child: Center(
+    child: Text(
+      "Liquid Glass",
+      style: TextStyle(
+        fontSize: 20,
+        fontWeight: FontWeight.bold,
+      )
+    )
+  )
 )
-,
-);
 ```
 
 ---
@@ -64,11 +65,11 @@ lightweight.
 
 **Use it for:**
 
-* Cards
-* Dialogs
-* Profile sections
-* Modern dashboard components
-* Decorative UI blocks
+- Cards
+- Dialogs
+- Profile sections
+- Modern dashboard components
+- Decorative UI blocks
 
 If you need enhancements — feel free to open an issue or request on GitHub!
 
