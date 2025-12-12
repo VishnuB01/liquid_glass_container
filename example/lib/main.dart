@@ -19,11 +19,8 @@ class MyApp extends StatelessWidget {
           children: [
             Transform(
               alignment: Alignment.center,
-              transform: Matrix4.identity()..scale(-1.0, -1.0),
+              transform: Matrix4.diagonal3Values(-1, -1, 1),
               child: Image.asset(
-                // 'https://images.unsplash.com/photo-1644770510895-b61702eaafc3?q=80&w=3029&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                // 'https://images.unsplash.com/photo-1507608443039-bfde4fbcd142?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                // 'https://images.unsplash.com/photo-1470509037663-253afd7f0f51?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'assets/bgimage/bg_image4.png',
                 fit: BoxFit.fill,
                 height: double.infinity,
