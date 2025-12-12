@@ -107,7 +107,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.0.0"
-  liquid_glass_container:
+  liquid_glass_container_plus:
     dependency: "direct main"
     description:
       path: ".."
