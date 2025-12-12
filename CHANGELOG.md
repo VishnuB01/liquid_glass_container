@@ -1,3 +1,8 @@
+## [1.0.1]
+
+### Fixes
+- Readme fixes
+
 ## [1.0.0]
 
 ### Features
