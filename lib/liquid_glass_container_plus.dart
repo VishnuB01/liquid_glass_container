@@ -91,7 +91,7 @@ class _LiquidGlassContainerState extends State<LiquidGlassContainer> {
   void _loadShader() async {
     try {
       final program = await FragmentProgram.fromAsset(
-        'packages/liquid_glass_container/shaders/liquid_glass.frag',
+        'packages/liquid_glass_container_plus/shaders/liquid_glass.frag',
       );
       if (mounted) {
         setState(() => _program = program);
