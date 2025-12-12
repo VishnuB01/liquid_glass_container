@@ -1,3 +1,9 @@
+## [1.0.3]
+
+### Fixes
+- Added documentation
+- Fixed readme.md
+
 ## [1.0.2]
 
 ### Fixes
