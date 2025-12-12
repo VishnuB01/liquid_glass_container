@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
               child: Image.asset(
                 // 'https://images.unsplash.com/photo-1644770510895-b61702eaafc3?q=80&w=3029&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 // 'https://images.unsplash.com/photo-1507608443039-bfde4fbcd142?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                // 'https://images.unsplash.com/photo-1582784085524-4eec6b9b364d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwM3x8fGVufDB8fHx8fA%3D%3D',
+                // 'https://images.unsplash.com/photo-1470509037663-253afd7f0f51?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
                 'assets/bgimage/bg_image4.png',
                 fit: BoxFit.fill,
                 height: double.infinity,
@@ -123,50 +123,50 @@ class MyApp extends StatelessWidget {
                         ),
                         blurRadiusPx: 5,
                       ),
+                      buildRoundIconsRow(context),
+                      LiquidGlassContainer(
+                        settings: LiquidGlassSettings(blurRadiusPx: 100),
+                        borderRadius: 20,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            spacing: 10,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              SizedBox(),
+                              Expanded(
+                                child: LinearProgressIndicator(
+                                  borderRadius: BorderRadius.circular(20),
+                                  value: 0.7,
+                                  color: Colors.white,
+                                  backgroundColor: Colors.grey,
+                                ),
+                              ),
+                              Icon(
+                                Icons.volume_up_rounded,
+                                color: Colors.white,
+                                size: Theme.of(
+                                  context,
+                                ).textTheme.headlineMedium?.fontSize,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          buildLiquidGlassContainer(
+                          liquidVerticalSlider(
                             context,
-                            Icon(
-                              Icons.flight_rounded,
-                              color: Colors.orangeAccent,
-                              size: Theme.of(
-                                context,
-                              ).textTheme.headlineMedium?.fontSize,
-                            ),
-                            bgColor: Colors.greenAccent,
-                            lightStrength: 2,
-                            blurRadiusPx: 20,
-                            borderRadius: 100,
+                            Icons.wb_sunny_rounded,
+                            0.5,
+                            Colors.orangeAccent,
                           ),
-                          buildLiquidGlassContainer(
+                          liquidVerticalSlider(
                             context,
-                            Icon(
-                              Icons.bluetooth_rounded,
-                              color: Colors.blueAccent,
-                              size: Theme.of(
-                                context,
-                              ).textTheme.headlineMedium?.fontSize,
-                            ),
-                            bgColor: Colors.blueAccent,
-                            blurRadiusPx: 9999,
-                            lightStrength: 2,
-                            borderRadius: 100,
-                          ),
-                          buildLiquidGlassContainer(
-                            context,
-                            Icon(
-                              Icons.near_me_outlined,
-                              color: Colors.tealAccent,
-                              size: Theme.of(
-                                context,
-                              ).textTheme.headlineMedium?.fontSize,
-                            ),
-                            bgColor: Colors.tealAccent,
-                            lightStrength: 2,
-                            blurRadiusPx: 20,
-                            borderRadius: 100,
+                            Icons.volume_up_rounded,
+                            0.3,
+                            Colors.blueAccent,
                           ),
                         ],
                       ),
@@ -176,6 +176,46 @@ class MyApp extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  LiquidGlassContainer liquidVerticalSlider(
+    BuildContext context,
+    IconData icon,
+    double value,
+    Color iconColor,
+  ) {
+    return LiquidGlassContainer(
+      borderRadius: 40,
+      child: Container(
+        height: 150,
+        width: 70,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.transparent,
+              Colors.transparent,
+              Colors.white,
+              Colors.white,
+            ],
+            stops: [0.0, value, value, 1.0],
+          ),
+          borderRadius: BorderRadius.circular(40),
+        ),
+        child: Align(
+          alignment: Alignment.bottomCenter,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 15.0),
+            child: Icon(
+              icon,
+              color: iconColor,
+              size: Theme.of(context).textTheme.headlineMedium?.fontSize,
+            ),
+          ),
         ),
       ),
     );
@@ -203,6 +243,50 @@ class MyApp extends StatelessWidget {
         lightbandStrength: lightStrength,
       ),
       child: Padding(padding: const EdgeInsets.all(12.0), child: child),
+    );
+  }
+
+  Row buildRoundIconsRow(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        buildLiquidGlassContainer(
+          context,
+          Icon(
+            Icons.flight_rounded,
+            color: Colors.orangeAccent,
+            size: Theme.of(context).textTheme.headlineMedium?.fontSize,
+          ),
+          bgColor: Colors.greenAccent,
+          lightStrength: 2,
+          blurRadiusPx: 20,
+          borderRadius: 100,
+        ),
+        buildLiquidGlassContainer(
+          context,
+          Icon(
+            Icons.bluetooth_rounded,
+            color: Colors.blueAccent,
+            size: Theme.of(context).textTheme.headlineMedium?.fontSize,
+          ),
+          bgColor: Colors.blueAccent,
+          blurRadiusPx: 9999,
+          lightStrength: 2,
+          borderRadius: 100,
+        ),
+        buildLiquidGlassContainer(
+          context,
+          Icon(
+            Icons.wifi_tethering,
+            color: Colors.tealAccent,
+            size: Theme.of(context).textTheme.headlineMedium?.fontSize,
+          ),
+          bgColor: Colors.tealAccent,
+          lightStrength: 2,
+          blurRadiusPx: 20,
+          borderRadius: 100,
+        ),
+      ],
     );
   }
 }
