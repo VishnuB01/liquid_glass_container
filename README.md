@@ -4,8 +4,7 @@ A beautiful Apple-style liquid glass container for Flutter, featuring refraction
 and distortion effects. Lightweight, customizable, and perfect for modern UI design.
 
 ---
-<img src="https://raw.githubusercontent.com/VishnuB01/radar_chart_plus/main/example/lib/assets/chart_image.jpg" width="400" alt="Radar Chart Example">
-
+<img src="https://raw.githubusercontent.com/VishnuB01/liquid_glass_container/blob/main/example/assets/screen_shots/screen_shot.jpg" width="400" alt="Radar Chart Example">
 ## Features
 
 - 💧 Apple-style liquid glass effect
