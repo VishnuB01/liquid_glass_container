@@ -5,7 +5,7 @@ and distortion effects. Lightweight, customizable, and perfect for modern UI des
 
 ---
 
-<img src="https://raw.githubusercontent.com/VishnuB01/liquid_glass_container/main/example/assets/screen_shots/screen_shot.jpg?raw=true" width="400" />
+<img src="https://raw.githubusercontent.com/VishnuB01/liquid_glass_container/main/example/assets/screen_shots/screen_shot.jpg?raw=true" width="400"  alt="Flutter liquid glass container example showing Apple-style glassmorphism UI" />
 
 ## Features
 
