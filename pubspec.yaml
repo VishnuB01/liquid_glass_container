@@ -15,9 +15,6 @@ platforms:
   ios:
   linux:
   macos:
-  web:
-  windows:
-
 
 environment:
   sdk: ^3.10.1
