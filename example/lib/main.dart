@@ -30,144 +30,154 @@ class MyApp extends StatelessWidget {
             ),
             SafeArea(
               child: Center(
-                child: SizedBox(
-                  width: MediaQuery.sizeOf(context).width * 0.6,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    spacing: 15,
-                    children: [
-                      SizedBox(height: MediaQuery.sizeOf(context).height * 0.1),
-                      buildLiquidGlassContainer(
-                        width: MediaQuery.sizeOf(context).width * 0.6,
-                        context,
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.wifi_rounded,
-                              color: Colors.white,
-                              size: Theme.of(
-                                context,
-                              ).textTheme.headlineLarge?.fontSize,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Wi-Fi',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineSmall
-                                      ?.copyWith(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                                Text(
-                                  'On',
-                                  style: Theme.of(context).textTheme.titleLarge
-                                      ?.copyWith(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                              ],
-                            ),
-                          ],
+                child: RepaintBoundary(
+                  child: SizedBox(
+                    width: MediaQuery.sizeOf(context).width * 0.6,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      spacing: 15,
+                      children: [
+                        SizedBox(
+                          height: MediaQuery.sizeOf(context).height * 0.1,
                         ),
-                        blurRadiusPx: 0,
-                      ),
-                      buildLiquidGlassContainer(
-                        width: MediaQuery.sizeOf(context).width * 0.6,
-                        context,
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(
-                              Icons.signal_cellular_alt_rounded,
-                              color: Colors.white70,
-                              size: Theme.of(
-                                context,
-                              ).textTheme.headlineLarge?.fontSize,
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  'Data',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineSmall
-                                      ?.copyWith(
-                                        color: Colors.white70,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                                Text(
-                                  'Off',
-                                  style: Theme.of(context).textTheme.titleLarge
-                                      ?.copyWith(
-                                        color: Colors.grey,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        blurRadiusPx: 5,
-                      ),
-                      buildRoundIconsRow(context),
-                      LiquidGlassContainer(
-                        settings: LiquidGlassSettings(blurRadiusPx: 100),
-                        borderRadius: 20,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Row(
-                            spacing: 10,
+                        buildLiquidGlassContainer(
+                          width: MediaQuery.sizeOf(context).width * 0.6,
+                          context,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             mainAxisSize: MainAxisSize.min,
                             children: [
-                              SizedBox(),
-                              Expanded(
-                                child: LinearProgressIndicator(
-                                  borderRadius: BorderRadius.circular(20),
-                                  value: 0.7,
-                                  color: Colors.white,
-                                  backgroundColor: Colors.grey,
-                                ),
-                              ),
                               Icon(
-                                Icons.volume_up_rounded,
+                                Icons.wifi_rounded,
                                 color: Colors.white,
                                 size: Theme.of(
                                   context,
-                                ).textTheme.headlineMedium?.fontSize,
+                                ).textTheme.headlineLarge?.fontSize,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Wi-Fi',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineSmall
+                                        ?.copyWith(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                  Text(
+                                    'On',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .titleLarge
+                                        ?.copyWith(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
+                          blurRadiusPx: 0,
                         ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          liquidVerticalSlider(
-                            context,
-                            Icons.wb_sunny_rounded,
-                            0.5,
-                            Colors.orangeAccent,
+                        buildLiquidGlassContainer(
+                          width: MediaQuery.sizeOf(context).width * 0.6,
+                          context,
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(
+                                Icons.signal_cellular_alt_rounded,
+                                color: Colors.white70,
+                                size: Theme.of(
+                                  context,
+                                ).textTheme.headlineLarge?.fontSize,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Data',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineSmall
+                                        ?.copyWith(
+                                          color: Colors.white70,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                  Text(
+                                    'Off',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .titleLarge
+                                        ?.copyWith(
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
-                          liquidVerticalSlider(
-                            context,
-                            Icons.volume_up_rounded,
-                            0.3,
-                            Colors.blueAccent,
+                          blurRadiusPx: 5,
+                        ),
+                        buildRoundIconsRow(context),
+                        LiquidGlassContainer(
+                          settings: const LiquidGlassSettings(
+                            blurRadiusPx: 100,
                           ),
-                        ],
-                      ),
-                    ],
+                          borderRadius: 20,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              spacing: 10,
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const SizedBox(),
+                                Expanded(
+                                  child: LinearProgressIndicator(
+                                    borderRadius: BorderRadius.circular(20),
+                                    value: 0.7,
+                                    color: Colors.white,
+                                    backgroundColor: Colors.grey,
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.volume_up_rounded,
+                                  color: Colors.white,
+                                  size: Theme.of(
+                                    context,
+                                  ).textTheme.headlineMedium?.fontSize,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            liquidVerticalSlider(
+                              context,
+                              Icons.wb_sunny_rounded,
+                              0.5,
+                              Colors.orangeAccent,
+                            ),
+                            liquidVerticalSlider(
+                              context,
+                              Icons.volume_up_rounded,
+                              0.3,
+                              Colors.blueAccent,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -193,7 +203,7 @@ class MyApp extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [
+            colors: const [
               Colors.transparent,
               Colors.transparent,
               Colors.white,

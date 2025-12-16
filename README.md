@@ -84,3 +84,9 @@ Contributions are highly appreciated! Want to add improvements or fix something?
 3. Implement your changes with clean commit messages
 4. Submit a Pull Request describing what you changed and why
 5. Your PR will be reviewed and merged after approval
+
+## Contributors
+
+<a href="https://github.com/VishnuB01/liquid_glass_container/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=VishnuB01/liquid_glass_container" />
+</a>
