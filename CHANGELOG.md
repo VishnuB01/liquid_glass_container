@@ -1,3 +1,8 @@
+## [1.0.5]
+
+### Fixes
+- Fixes for pub scoring
+
 ## [1.0.4]
 
 ### Fixes
