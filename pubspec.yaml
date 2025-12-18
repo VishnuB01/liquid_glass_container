@@ -11,7 +11,7 @@ topics:
   - apple
 
 screenshots:
-  - description: 'This screenshot shows the area type charts image.'
+  - description: 'This image shows a sample of the liquid glass container's refraction'
     path: screenshots/screen_shot.jpg
 platforms:
   android:
